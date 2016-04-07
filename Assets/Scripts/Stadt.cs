@@ -11,7 +11,6 @@ public class Stadt : WorldObject {
 
     protected override void setProduction()
     {
-        prodMoney = 10;
     }
 
     // Use this for initialization

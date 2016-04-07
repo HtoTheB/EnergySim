@@ -12,7 +12,6 @@ public class Atomkraftwerk : WorldObject {
 
     protected override void setProduction()
     {
-        prodElectricity = 10;
     }
 
     // Use this for initialization

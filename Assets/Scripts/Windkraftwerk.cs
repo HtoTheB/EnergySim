@@ -22,8 +22,6 @@ public class Windkraftwerk : WorldObject {
 
     protected override void setProduction()
     {
-        prodElectricity = 5;
-        Debug.Log("set");
     }
 
     protected override void sendInformationsTo(WorldObjectPanelScript receiverscript)
