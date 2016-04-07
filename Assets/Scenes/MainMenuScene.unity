@@ -325,14 +325,14 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 286567744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -8.68919}
-  m_LocalScale: {x: 0.868919, y: 0.868919, z: 0.868919}
+  m_LocalPosition: {x: 0, y: 0, z: -0.868919}
+  m_LocalScale: {x: 0.086891904, y: 0.086891904, z: 0.086891904}
   m_Children:
   - {fileID: 695561006}
   - {fileID: 116598848}
   - {fileID: 399250632}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 745938392}
+  m_RootOrder: 0
 --- !u!1 &399250631
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +749,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
-  m_Children: []
+  m_Children:
+  - {fileID: 286567745}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1001 &834393638
@@ -1270,6 +1271,10 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1497100182 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 135954, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
+  m_PrefabInternal: {fileID: 1138622562}
 --- !u!224 &1899908845 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22405112, guid: 7b66e34e5ea5cf242a32afd3dac6d270,
@@ -1424,7 +1429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310cd6ec408fbda41b2f246604795f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldObjectPanel: {fileID: 0}
+  worldObjectPanel: {fileID: 1497100182}
   resMoney: 100
   resElectricity: 200
   resWorkforce: 1000
