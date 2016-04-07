@@ -4,9 +4,8 @@ using System;
 
 public class GameMasterScript : MonoBehaviour {
 
-    //Main ressources of the game, >0
+    //Main ressources of the game
     public uint resMoney, resElectricity, resWorkforce, resFood;
-    // Production in Unit/Second, >0
     public uint prodMoney, prodElectricity, prodWorkforce, prodFood;
     private int production_basespeed = 1;
 
@@ -33,7 +32,6 @@ public class GameMasterScript : MonoBehaviour {
 
     private void Produce(int speed)
     {
-        // Production of Resources is handled here. Using checked to check for uint-Overflow
         try
         {
             checked
