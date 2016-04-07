@@ -52,7 +52,6 @@ public class GameMasterScript : MonoBehaviour
             checked
             {
                 resMoney += (prodMoney * Time.deltaTime);
-                Debug.Log(resMoney + " " + prodMoney);
             }
         }
         catch (OverflowException e)
