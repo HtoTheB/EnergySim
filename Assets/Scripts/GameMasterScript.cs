@@ -7,9 +7,9 @@ public class GameMasterScript : MonoBehaviour
     public static GameMasterScript instance;
 
     //Main ressources of the game, >0
-    public uint resMoney, resElectricity, resWorkforce, resFood;
+    public float resMoney, resElectricity, resWorkforce, resFood;
     // Production in Unit/Second, >0
-    public uint prodMoney, prodElectricity, prodWorkforce, prodFood;
+    public float prodMoney, prodElectricity, prodWorkforce, prodFood;
     private int production_basespeed = 1;
 
 
@@ -51,7 +51,8 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resMoney += (uint)(prodMoney * Time.deltaTime);
+                resMoney += (prodMoney * Time.deltaTime);
+                Debug.Log(resMoney + " " + prodMoney);
             }
         }
         catch (OverflowException e)
@@ -63,7 +64,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resElectricity += (uint)(prodElectricity * Time.deltaTime);
+                resElectricity += (prodElectricity * Time.deltaTime);
             }
         }
         catch (OverflowException e)
@@ -75,7 +76,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resWorkforce += (uint)(prodWorkforce * Time.deltaTime);
+                resWorkforce += (prodWorkforce * Time.deltaTime);
             }
         }
         catch (OverflowException e)
@@ -87,7 +88,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resFood += (uint)(prodFood * Time.deltaTime);
+                resFood += (prodFood * Time.deltaTime);
             }
         }
         catch (OverflowException e)
