@@ -63,7 +63,8 @@ public class GameMasterScript : MonoBehaviour
             try { OverallProdWorkforce += ((Resource)(go.GetComponent<WorldObject>().infos.production["workforce"])).amount; } catch (Exception e) { }
         }
 
-        // Production of Resources is handled here
+        // Production of Resources is handled here. Using checked to check for uint-Overflow
+
         try
         {
             checked
