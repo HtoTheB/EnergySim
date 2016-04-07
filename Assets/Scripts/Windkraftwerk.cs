@@ -5,28 +5,30 @@ using System;
 
 public class Windkraftwerk : WorldObject {
 
-    bool panelopen = false;
-    public GameObject worldObjectPanel;
-	// Use this for initialization
-	void Start () {
-	
+
+
+   
+
+    // Use this for initialization
+    void Start () {
+        setProduction();
 	}
-	
+
+    
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
-    protected override void OpenInfoScreen()
+    protected override void setProduction()
     {
-        if(!panelopen)
-        {
-            GameObject panel = (GameObject)Instantiate(worldObjectPanel,this.transform.position,Quaternion.identity);
-            panel.transform.SetParent(GameObject.Find("Canvas").transform);
-            panel.transform.localScale = new Vector3(1, 1, 1);
-            panel.SetActive(true);
-            panelopen = true;
-            Debug.Log("Opened WK Panel");
-        }
+        prodElectricity = 5;
+        Debug.Log("set");
+    }
+
+    protected override void sendInformationsTo(WorldObjectPanelScript receiverscript)
+    {
+        receiverscript.setOwner(this);
+        receiverscript.setInformations("Windkraftwerk", this.prodElectricity, "MW", "WindkraftwerkMinigame");
     }
 }

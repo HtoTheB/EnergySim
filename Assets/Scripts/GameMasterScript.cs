@@ -6,11 +6,14 @@ public class GameMasterScript : MonoBehaviour
 {
     public static GameMasterScript instance;
 
+    public GameObject worldObjectPanel; // Access to Prefab
+
     //Main ressources of the game, >0
     public float resMoney, resElectricity, resWorkforce, resFood;
     // Production in Unit/Second, >0
-    public float prodMoney, prodElectricity, prodWorkforce, prodFood;
+    public float OverallProdMoney, OverallProdElectricity, OverallProdWorkforce, OverallProdFood;
     private int production_basespeed = 1;
+    
 
 
     /* Resource Description
@@ -51,7 +54,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resMoney += (prodMoney * Time.deltaTime);
+                resMoney += (OverallProdMoney * Time.deltaTime);
             }
         }
         catch (OverflowException e)
@@ -63,7 +66,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resElectricity += (prodElectricity * Time.deltaTime);
+                resElectricity += (OverallProdElectricity * Time.deltaTime);
             }
         }
         catch (OverflowException e)
@@ -75,7 +78,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resWorkforce += (prodWorkforce * Time.deltaTime);
+                resWorkforce += (OverallProdWorkforce * Time.deltaTime);
             }
         }
         catch (OverflowException e)
@@ -87,7 +90,7 @@ public class GameMasterScript : MonoBehaviour
         {
             checked
             {
-                resFood += (prodFood * Time.deltaTime);
+                resFood += (OverallProdFood * Time.deltaTime);
             }
         }
         catch (OverflowException e)
