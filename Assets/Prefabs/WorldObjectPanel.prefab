@@ -11,7 +11,7 @@ GameObject:
   - 222: {fileID: 22212844}
   - 114: {fileID: 11405214}
   m_Layer: 5
-  m_Name: NameText
+  m_Name: NameLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!114 &11411956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -351,7 +351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Test
 --- !u!114 &11468196
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -639,7 +639,7 @@ RectTransform:
   m_GameObject: {fileID: 135954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.776689, y: 0.776689, z: 0.776689}
+  m_LocalScale: {x: 30.357754, y: 30.357754, z: 30.357754}
   m_Children:
   - {fileID: 22499570}
   - {fileID: 22408676}
@@ -650,7 +650,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 229.9, y: 103.781265}
+  m_AnchoredPosition: {x: 9385.897, y: 4251.837}
   m_SizeDelta: {x: 153.6, y: 139.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22497422
