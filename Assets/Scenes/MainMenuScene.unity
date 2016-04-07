@@ -95,9 +95,10 @@ GameObject:
   - 4: {fileID: 116598848}
   - 212: {fileID: 116598849}
   - 65: {fileID: 116598850}
+  - 114: {fileID: 116598851}
   m_Layer: 0
   m_Name: KWerk_Atom
-  m_TagString: Untagged
+  m_TagString: WorldObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,6 +157,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &116598851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 116598847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe2a559273f6c84c9bba6964a3a0f5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prodMoney: 0
+  prodElectricity: 100
+  prodWorkforce: 0
+  prodFood: 0
 --- !u!1 &182097231
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +362,7 @@ GameObject:
   - 114: {fileID: 399250634}
   m_Layer: 0
   m_Name: KWerk_Wind
-  m_TagString: Untagged
+  m_TagString: WorldObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prodMoney: 0
-  prodElectricity: 0
+  prodElectricity: 10
   prodWorkforce: 0
   prodFood: 0
 --- !u!65 &399250635
@@ -618,9 +634,10 @@ GameObject:
   - 4: {fileID: 695561006}
   - 212: {fileID: 695561007}
   - 65: {fileID: 695561008}
+  - 114: {fileID: 695561009}
   m_Layer: 0
   m_Name: Stadt
-  m_TagString: Untagged
+  m_TagString: WorldObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,6 +696,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &695561009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695561005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7be9bc1c2e09d7409875d10e71f9375, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prodMoney: 10
+  prodElectricity: 0
+  prodWorkforce: 0
+  prodFood: 0
 --- !u!1 &745938389
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,7 +784,7 @@ Transform:
   m_Children:
   - {fileID: 286567745}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &834393638
 Prefab:
   m_ObjectHideFlags: 0
@@ -983,96 +1015,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RessourcePanelPrefab: {fileID: 170472, guid: 7b66e34e5ea5cf242a32afd3dac6d270, type: 2}
---- !u!1001 &1138622562
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -63
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -53.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 153.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 139.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 22487966, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 180492, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_Name
-      value: UpgradeButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 146366, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-      propertyPath: m_Name
-      value: ProductionText
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-  m_IsPrefabParent: 0
 --- !u!224 &1139820498 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22405112, guid: 7b66e34e5ea5cf242a32afd3dac6d270,
@@ -1271,10 +1213,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1497100182 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 135954, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
-  m_PrefabInternal: {fileID: 1138622562}
 --- !u!224 &1899908845 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22405112, guid: 7b66e34e5ea5cf242a32afd3dac6d270,
@@ -1429,7 +1367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310cd6ec408fbda41b2f246604795f88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldObjectPanel: {fileID: 1497100182}
+  worldObjectPanel: {fileID: 135954, guid: 05de4790c19ac00408a08dd63155d7ad, type: 2}
   resMoney: 100
   resElectricity: 200
   resWorkforce: 1000
