@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using System.Collections;
 
-public class DemScriptTho : MonoBehaviour {
+public class MapObjectManager : MonoBehaviour {
+
+    public List<WorldObject> mapObjects;
 
 	// Use this for initialization
 	void Start () {

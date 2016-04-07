@@ -342,7 +342,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 286567745}
   m_Layer: 0
-  m_Name: GameObjects
+  m_Name: MapObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,7 +1335,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2024846311}
   - 114: {fileID: 2024846312}
-  - 114: {fileID: 2024846313}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GameController
@@ -1375,17 +1374,6 @@ MonoBehaviour:
   OverallProdElectricity: 0
   OverallProdWorkforce: 0
   OverallProdFood: 0
---- !u!114 &2024846313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2024846310}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e85fc2a6c7b6544c822c0b7874a5513, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2043181528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,6 +1383,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043181530}
   - 114: {fileID: 2043181529}
+  - 114: {fileID: 2043181531}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -1410,7 +1399,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043181528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c0216c53bfa33547a406a72b6f73c56, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c5e3a266f8bdc744afdf076e35c2fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deltaMouse: {x: 0, y: 0, z: 0}
@@ -1430,3 +1419,18 @@ Transform:
   - {fileID: 286567745}
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &2043181531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2043181528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e9b549681c88f4ea73314e618aa6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapObjects:
+  - {fileID: 695561009}
+  - {fileID: 116598851}
+  - {fileID: 399250634}
