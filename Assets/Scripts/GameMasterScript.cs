@@ -43,12 +43,22 @@ public class GameMasterScript : MonoBehaviour
     void Update()
     {
         Produce(production_basespeed);
-
-
     }
 
     private void Produce(int speed)
     {
+
+        GameObject[] wolist = GameObject.FindGameObjectsWithTag("WorldObject");
+
+        foreach (GameObject go in wolist)
+        {
+            OverallProdElectricity += go.GetComponent<WorldObject>().prodElectricity;
+            OverallProdFood += go.GetComponent<WorldObject>().prodFood;
+            OverallProdMoney += go.GetComponent<WorldObject>().prodMoney;
+            OverallProdWorkforce += go.GetComponent<WorldObject>().prodWorkforce;
+        }
+
+        Debug.Log("Produce");
         // Production of Resources is handled here. Using checked to check for uint-Overflow
         try
         {
