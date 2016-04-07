@@ -58,7 +58,6 @@ public class GameMasterScript : MonoBehaviour
             OverallProdWorkforce += go.GetComponent<WorldObject>().prodWorkforce;
         }
 
-        Debug.Log("Produce");
         // Production of Resources is handled here. Using checked to check for uint-Overflow
         try
         {
