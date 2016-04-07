@@ -4,7 +4,7 @@ using System;
 
 public class GameMasterScript : MonoBehaviour
 {
-    public static GameMasterScript instance;
+    public static GameMasterScript instance; // Singleton
 
     public GameObject worldObjectPanel; // Access to Prefab
 
@@ -25,6 +25,7 @@ public class GameMasterScript : MonoBehaviour
 
     void Awake()
     {
+        //Singleton 
         if (instance != null)
             GameObject.Destroy(instance);
         else
@@ -45,21 +46,24 @@ public class GameMasterScript : MonoBehaviour
         Produce(production_basespeed);
     }
 
+    /// <summary>
+    /// Adds The Production of all WorldObjects and produces the goods frame independant
+    /// </summary>
+    /// <param name="speed">base speed modifier</param>
     private void Produce(int speed)
     {
-
+        // Calculating current Production
         GameObject[] wolist = GameObject.FindGameObjectsWithTag("WorldObject");
 
         foreach (GameObject go in wolist)
         {
-            OverallProdElectricity += go.GetComponent<WorldObject>().prodElectricity;
-            OverallProdFood += go.GetComponent<WorldObject>().prodFood;
-            OverallProdMoney += go.GetComponent<WorldObject>().prodMoney;
-            OverallProdWorkforce += go.GetComponent<WorldObject>().prodWorkforce;
+            try { OverallProdElectricity += ((Resource)(go.GetComponent<WorldObject>().infos.production["electricity"])).amount; } catch (Exception e) { }
+            try { OverallProdFood += ((Resource)(go.GetComponent<WorldObject>().infos.production["food"])).amount;} catch (Exception e) { }
+            try { OverallProdMoney += ((Resource)(go.GetComponent<WorldObject>().infos.production["money"])).amount; } catch (Exception e) { }
+            try { OverallProdWorkforce += ((Resource)(go.GetComponent<WorldObject>().infos.production["workforce"])).amount; } catch (Exception e) { }
         }
 
-        Debug.Log("Produce");
-        // Production of Resources is handled here. Using checked to check for uint-Overflow
+        // Production of Resources is handled here
         try
         {
             checked

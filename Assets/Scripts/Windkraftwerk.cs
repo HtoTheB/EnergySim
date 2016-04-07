@@ -22,11 +22,11 @@ public class Windkraftwerk : WorldObject {
 
     protected override void setProduction()
     {
+        this.infos.level = 1;
+        this.infos.name = "Windkraftwerk";        
+        this.infos.production.Add("electricity",new Resource("electricity", 10, "MW"));
+        this.infos.production.Add("food",new Resource("food", 20, "Tons"));
     }
 
-    protected override void sendInformationsTo(WorldObjectPanelScript receiverscript)
-    {
-        receiverscript.setOwner(this);
-        receiverscript.setInformations("Windkraftwerk", this.prodElectricity, "MW", "WindkraftwerkMinigame");
-    }
+    
 }

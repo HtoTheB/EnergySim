@@ -14,18 +14,16 @@ public class MapBackgroundScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	    if (Input.GetMouseButtonDown(1))
+	    if (Input.GetMouseButtonDown(0))
         {
             lastMouse = Input.mousePosition;
-            Debug.Log("Mouse down: "+ Input.mousePosition);
         }
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(0))
         {
             deltaMouse = lastMouse - Input.mousePosition;
 
             transform.position-= new Vector3 (camera.ScreenToWorldPoint(new Vector3((Screen.width/2) + deltaMouse.x, (Screen.height/2) + deltaMouse.y, 0)).x, camera.ScreenToWorldPoint(new Vector3((Screen.width/2) + deltaMouse.x, (Screen.height/2) + deltaMouse.y, 0)).y,0);
 
-            Debug.Log(new Vector3(camera.ScreenToWorldPoint(new Vector3((Screen.width/2) + deltaMouse.x, (Screen.height/2) + deltaMouse.y, 0)).x, camera.ScreenToWorldPoint(new Vector3((Screen.width/2) + deltaMouse.x, (Screen.height/2) + deltaMouse.y, 0)).y, 0));
 
             lastMouse = Input.mousePosition;
         }

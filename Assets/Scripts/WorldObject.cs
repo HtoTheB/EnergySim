@@ -3,10 +3,10 @@ using System.Collections;
 
 public abstract class WorldObject : MonoBehaviour
 {
-    public float prodMoney, prodElectricity, prodWorkforce, prodFood;
+   
     protected bool panelopen = false;
 
-
+    public WorldObjectInfos infos = new WorldObjectInfos();
 
 
 
@@ -33,16 +33,19 @@ public abstract class WorldObject : MonoBehaviour
             panel.transform.SetParent(GameObject.Find("Canvas").transform);
             panel.transform.localScale = new Vector3(1, 1, 1);
             panel.SetActive(true);
-
-
-
+            
             panelopen = true;
-            this.sendInformationsTo(panel.GetComponent<WorldObjectPanelScript>());
+            panel.GetComponent<WorldObjectPanelScript>().setInformations(infos);
+            panel.GetComponent<WorldObjectPanelScript>().setOwner(this);
         }
     }
 
-    protected abstract void sendInformationsTo(WorldObjectPanelScript receiverscript);
+    
 
+
+    /// <summary>
+    /// Set the start Production
+    /// </summary>
     protected abstract void setProduction();
 
 }

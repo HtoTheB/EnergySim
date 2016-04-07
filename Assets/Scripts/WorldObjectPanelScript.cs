@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System;
 
 public class WorldObjectPanelScript : MonoBehaviour
 {
-    private WorldObject owner;
+    private WorldObject owner; // parent WorldObject(Windkraftwerk, Stadt etc.)
 
     // Use this for initialization
     void Start()
@@ -17,19 +18,25 @@ public class WorldObjectPanelScript : MonoBehaviour
 
     }
 
-    // Informations from parent WorldObject(Windkraftwerk, Stadt etc.)
+    
     public void setOwner(WorldObject owner)
     {
         this.owner = owner;
     }
 
-    public void setInformations(string WOName, float WOProduction, string prodUnit, string WOMinigameName)
+    // Informations from parent WorldObject(Windkraftwerk, Stadt etc.)
+    public void setInformations(WorldObjectInfos infos)
     {
-        transform.Find("NameText").gameObject.GetComponent<Text>().text = WOName;
-        transform.Find("ProductionText").gameObject.GetComponent<Text>().text = WOProduction.ToString() + " " + prodUnit;
+        transform.Find("NameLevelText").gameObject.GetComponent<Text>().text = infos.name;
+
+        foreach (DictionaryEntry entry in infos.production)
+        {
+            transform.Find("ProductionText").gameObject.GetComponent<Text>().text += ((Resource)entry.Value).amount + " " + ((Resource)entry.Value).unit + "\n";
+        }
+
     }
 
-    // Button Listner
+    // Button Listners
     public void CancelClicked()
     {
         owner.CloseInfoScreen();
