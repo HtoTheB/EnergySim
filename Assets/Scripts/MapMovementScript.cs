@@ -4,7 +4,8 @@ using System.Collections;
 public class MapMovementScript : MonoBehaviour {
 
     public Vector3 deltaMouse, lastMouse;
-    public float stretchFactor = 15;
+    public float stretchFactorX;
+    public float stretchFactorY;
     Camera camera;
 
 	// Use this for initialization
@@ -32,7 +33,7 @@ public class MapMovementScript : MonoBehaviour {
         {
             deltaMouse = lastMouse - Input.mousePosition;
 
-            transform.position-= new Vector3 (camera.ScreenToWorldPoint(new Vector3((Screen.width/2) + deltaMouse.x, (Screen.height/2) + deltaMouse.y, 0)).x, camera.ScreenToWorldPoint(new Vector3((Screen.width/2) + deltaMouse.x, (Screen.height/2) + deltaMouse.y, 0)).y,0);
+            transform.position -= (new Vector3(stretchFactorX * deltaMouse.x, 0,stretchFactorY * deltaMouse.y));
 
             lastMouse = Input.mousePosition;
         }
