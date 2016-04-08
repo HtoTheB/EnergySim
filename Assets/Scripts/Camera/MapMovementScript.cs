@@ -6,11 +6,10 @@ public class MapMovementScript : MonoBehaviour {
     public Vector3 deltaMouse, lastMouse;
     public float stretchFactorX;
     public float stretchFactorY;
-    Camera camera;
 
 	// Use this for initialization
 	void Start () {
-        camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+
 	}
 	
 	// Update is called once per frame

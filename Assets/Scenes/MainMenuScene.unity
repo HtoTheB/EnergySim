@@ -354,6 +354,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 286567745}
+  - 114: {fileID: 286567746}
   m_Layer: 0
   m_Name: MapObjects
   m_TagString: Untagged
@@ -376,6 +377,21 @@ Transform:
   - {fileID: 399250632}
   m_Father: {fileID: 2043181530}
   m_RootOrder: 1
+--- !u!114 &286567746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 286567744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e9b549681c88f4ea73314e618aa6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapObjects:
+  - {fileID: 695561009}
+  - {fileID: 116598851}
+  - {fileID: 399250634}
 --- !u!1 &399250631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,7 +1587,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 2043181530}
-  - 114: {fileID: 2043181529}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -1579,21 +1594,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2043181529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2043181528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5e9b549681c88f4ea73314e618aa6b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapObjects:
-  - {fileID: 695561009}
-  - {fileID: 116598851}
-  - {fileID: 399250634}
 --- !u!4 &2043181530
 Transform:
   m_ObjectHideFlags: 0
