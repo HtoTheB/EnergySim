@@ -42,7 +42,7 @@ public class CameraMovement : MonoBehaviour {
         {
             deltaMouse = lastMouse - Input.mousePosition;
 
-            transform.eulerAngles -= (new Vector3(rotationFactorVertical * deltaMouse.y, rotationFactorHorizontal * deltaMouse.x, 0));
+            transform.eulerAngles -= (new Vector3(-rotationFactorVertical * deltaMouse.y, rotationFactorHorizontal * deltaMouse.x, 0));
 
             lastMouse = Input.mousePosition;
         }
