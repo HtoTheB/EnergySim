@@ -181,6 +181,7 @@ GameObject:
   - 124: {fileID: 182097233}
   - 81: {fileID: 182097232}
   - 114: {fileID: 182097237}
+  - 114: {fileID: 182097238}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -249,7 +250,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 182097231}
-  m_LocalRotation: {x: 0.34202018, y: 0, z: 0, w: 0.9396926}
+  m_LocalRotation: {x: 0.38268346, y: 0, z: 0, w: 0.9238795}
   m_LocalPosition: {x: 0, y: 15, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -266,8 +267,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd769c3c1663614fa47f7e5f98db266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxZoom: 7
-  minZoom: 2
+  maxZoom: 80
+  minZoom: 30
+  zoomFactor: 15
+--- !u!114 &182097238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 182097231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb55a8ac632f26d46aa293ccefaafde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stretchFactorX: 0.1
+  stretchFactorY: 0.1
+  rotationFactorHorizontal: 0.1
+  rotationFactorVertical: 0.1
 --- !u!1 &189750512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,7 +1662,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2043181530}
   - 114: {fileID: 2043181529}
-  - 114: {fileID: 2043181531}
   m_Layer: 0
   m_Name: MapManager
   m_TagString: Untagged
@@ -1661,13 +1677,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043181528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c5e3a266f8bdc744afdf076e35c2fb1, type: 3}
+  m_Script: {fileID: 11500000, guid: f5e9b549681c88f4ea73314e618aa6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deltaMouse: {x: 0, y: 0, z: 0}
-  lastMouse: {x: 0, y: 0, z: 0}
-  stretchFactorX: 0.1
-  stretchFactorY: 0.1
+  mapObjects:
+  - {fileID: 695561009}
+  - {fileID: 116598851}
+  - {fileID: 399250634}
 --- !u!4 &2043181530
 Transform:
   m_ObjectHideFlags: 0
@@ -1682,18 +1698,3 @@ Transform:
   - {fileID: 286567745}
   m_Father: {fileID: 0}
   m_RootOrder: 5
---- !u!114 &2043181531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2043181528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5e9b549681c88f4ea73314e618aa6b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapObjects:
-  - {fileID: 695561009}
-  - {fileID: 116598851}
-  - {fileID: 399250634}
