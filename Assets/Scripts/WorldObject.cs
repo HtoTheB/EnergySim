@@ -29,8 +29,9 @@ public abstract class WorldObject : MonoBehaviour
     {
         if (!panelopen)
         {
-            GameObject panel = (GameObject)Instantiate(GameMasterScript.instance.worldObjectPanel, this.transform.position, Quaternion.identity);
-            panel.transform.SetParent(GameObject.Find("Canvas").transform);
+            GameObject panel = Instantiate(GameMasterScript.instance.worldObjectPanel);
+            ((RectTransform)panel.transform).anchoredPosition = new Vector2(0, 0);
+            panel.transform.SetParent(GameObject.Find("Canvas").transform,false);
             panel.transform.localScale = new Vector3(1, 1, 1);
             panel.SetActive(true);
             
