@@ -1,64 +1,61 @@
 fileFormatVersion: 2
-guid: 03a389e0aead1ce419e0b5c3d5da31a6
-timeCreated: 1460126553
+guid: 9e449b5eab05f424681f369c205ade76
+timeCreated: 1460127629
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
-    100000: Cube
-    100002: Cube_001
-    100004: Cube_002
-    100006: Cube_003
-    100008: Cube_004
-    100010: Cylinder
-    100012: Cylinder_001
-    100014: //RootNode
-    100016: Sphere
-    100018: Kuppel
-    100020: Plane
-    400000: Cube
-    400002: Cube_001
-    400004: Cube_002
-    400006: Cube_003
-    400008: Cube_004
-    400010: Cylinder
-    400012: Cylinder_001
-    400014: //RootNode
-    400016: Sphere
-    400018: Kuppel
-    400020: Plane
+    100000: Camera
+    100002: Cube
+    100004: Cube.001
+    100006: Cube.002
+    100008: Cube.003
+    100010: Cube.004
+    100012: Cylinder
+    100014: Cylinder.001
+    100016: Kuppel
+    100018: Lamp
+    100020: //RootNode
+    100022: Plane
+    400000: Camera
+    400002: Cube
+    400004: Cube.001
+    400006: Cube.002
+    400008: Cube.003
+    400010: Cube.004
+    400012: Cylinder
+    400014: Cylinder.001
+    400016: Kuppel
+    400018: Lamp
+    400020: //RootNode
+    400022: Plane
     2300000: Cube
-    2300002: Cube_001
-    2300004: Cube_002
-    2300006: Cube_003
-    2300008: Cube_004
+    2300002: Cube.001
+    2300004: Cube.002
+    2300006: Cube.003
+    2300008: Cube.004
     2300010: Cylinder
-    2300012: Cylinder_001
-    2300014: Sphere
-    2300016: Kuppel
-    2300018: Plane
+    2300012: Cylinder.001
+    2300014: Kuppel
+    2300016: Plane
     3300000: Cube
-    3300002: Cube_001
-    3300004: Cube_002
-    3300006: Cube_003
-    3300008: Cube_004
+    3300002: Cube.001
+    3300004: Cube.002
+    3300006: Cube.003
+    3300008: Cube.004
     3300010: Cylinder
-    3300012: Cylinder_001
-    3300014: Sphere
-    3300016: Kuppel
-    3300018: Plane
-    4300000: Cube_004
-    4300002: Cube_003
-    4300004: Cube_002
-    4300006: Cylinder_001
-    4300008: Cylinder
-    4300010: Sphere
-    4300012: Cube_001
-    4300014: Cube
-    4300016: Plane
-    4300018: Kuppel
-    7400000: Default Take
-    9500000: //RootNode
+    3300012: Cylinder.001
+    3300014: Kuppel
+    3300016: Plane
+    4300000: Plane
+    4300002: Kuppel
+    4300004: Cube.004
+    4300006: Cube.003
+    4300008: Cube.002
+    4300010: Cylinder.001
+    4300012: Cylinder
+    4300014: Cube.001
+    4300016: Cube
   materials:
     importMaterials: 1
     materialName: 0
@@ -117,7 +114,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
